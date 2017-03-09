@@ -1,9 +1,8 @@
-FROM node:alpine
+FROM node
 MAINTAINER Aug70 Co <aug70co@gmail.com>
 
-RUN npm install --silent -g markdown-pdf \
-  && mkdir -p /var /var/css \
-  && rm -rf ~/.npm/cache/*
-WORKDIR /var
-ENV NODE_PATH /usr/local/lib/node_modules
+ENV DATA_DIR=/data
+RUN npm install -g markdown-pdf && rm -rf ~/.npm/cache/*
+
+VOLUME $DATA_DIR
 CMD ["/bin/bash"]
