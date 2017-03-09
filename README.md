@@ -10,14 +10,6 @@
 
 - ```latest```
 
-## Build
-
-```
-git clone https://github.com/aug70/node-markdown-pdf.git
-cd node-markdown-pdf
-docker build -t aug70co/node-markdown-pdf .
-```
-
 ## Usage
 
 ```console
